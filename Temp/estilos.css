@@ -100,3 +100,61 @@ body {
     font-weight: 400;
     font-size: 18px;
 }
+
+.containerproductos {
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos img {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #2D2B29;
+}
+
+.proveedor {
+    font-weight: 500;
+    font-size: 18px;
+    color: #2D2B29;
+}
+
+.tituloproducto {
+    font-weight: 500;
+    font-size: 21px;
+    color: #2D2B29;
+    line-height: 22px;
+}
+
+.descripcionproducto {
+    font-weight: 500;
+    font-size: 21px;
+    color: #2D2B29;
+    text-align: right;
+}
+
+.contactoproveedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: #32BA7C;
+    align-items: center;
+}
+
+.contactoproveedor:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #1F8A59;
+}
