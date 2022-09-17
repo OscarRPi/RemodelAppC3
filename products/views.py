@@ -1,7 +1,7 @@
 import json
 from django.http import JsonResponse
 from django.views import View
-from .models import Producto_Ingresado
+from .models import *
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
