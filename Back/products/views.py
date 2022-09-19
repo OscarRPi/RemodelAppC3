@@ -32,37 +32,52 @@ class ProductView(View):
     def post(self,request):
         #print(request.body)
         jd = json.loads(request.body)
-        #print(jd)
+
         Producto_Ingresado.objects.create(
-            Valor=jd['Valor'],
-            Color=jd['Color'],
-            Tipo_Material=jd['Tipo_Material'],
-            Fecha_Ingreso=jd['Fecha_Ingreso']
+            Producto        = jd[0]['Producto'],
+            Id_Categoria_id = jd[0]['Id_Categoria_id'],
+            Id_Proveedor_id = jd[0]['Id_Proveedor_id'],
+            Valor           = jd[0]['Valor'],
+            Color           = jd[0]['Color'],
+            Tipo_Material   = jd[0]['Tipo_Material']
         )
+        
         datos = {'message':"Success"}
+        
         return JsonResponse(datos)
     
     # Para recibir datos desde el cliente y actualizar un registro    
     def put(self,request, id):
+        
         jd = json.loads(request.body)
         products = list(Producto_Ingresado.objects.filter(Id_ProductoIngresado=id).values())
+        
         if( len(products) > 0 ):
+                    
             product = Producto_Ingresado.objects.get(Id_ProductoIngresado=id)
-            product.Valor = jd['Valor']
-            product.Color = jd['Color']
-            product.Tipo_Material = jd['Tipo_Material']
-            product.Fecha_Ingreso = jd['Fecha_Ingreso']
+            
+            product.Producto        = jd[0]['Producto']
+            product.Id_Categoria_id = jd[0]['Id_Categoria_id']
+            product.Id_Proveedor_id = jd[0]['Id_Proveedor_id']
+            product.Valor           = jd[0]['Valor']
+            product.Color           = jd[0]['Color']
+            product.Tipo_Material   = jd[0]['Tipo_Material']
+
             product.save()
+
             datos = {'message':"Success"}
+            
         else:
-            datos = {'message':"Product not found..."}  
+            datos = {'message':"Product not found..."} 
+            
         return JsonResponse(datos)
     
     # Para recibir una orden desde el cliente y eliminar 
     def delete(self,request, id):
         products = list(Producto_Ingresado.objects.filter(Id_ProductoIngresado=id).values())
+        print(products)
         if( len(products) > 0 ):
-            Producto_Ingresado.objects.filter(id=id).delete()
+            Producto_Ingresado.objects.filter(Id_ProductoIngresado=id).delete()
             datos = {'message':"Success"}
         else:
             datos = {'message':"Product not found..."}
