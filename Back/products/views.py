@@ -26,7 +26,12 @@ class ProductView(View):
                 datos = {'message':"Success",'products':products}
             else:
                 datos = {'message':"Products not found..."}
-        return JsonResponse(datos)
+        
+        response = JsonResponse(datos)
+               
+        response["Access-Control-Allow-Origin"] = "*"
+        
+        return response
     
     # Para recibir datos desde el cliente y crear un nuevo registro
     def post(self,request):
@@ -44,7 +49,11 @@ class ProductView(View):
         
         datos = {'message':"Success"}
         
-        return JsonResponse(datos)
+        response = JsonResponse(datos)
+               
+        response["Access-Control-Allow-Origin"] = "*"
+        
+        return response
     
     # Para recibir datos desde el cliente y actualizar un registro    
     def put(self,request, id):
@@ -69,8 +78,12 @@ class ProductView(View):
             
         else:
             datos = {'message':"Product not found..."} 
-            
-        return JsonResponse(datos)
+        
+        response = JsonResponse(datos)
+               
+        response["Access-Control-Allow-Origin"] = "*"
+        
+        return response
     
     # Para recibir una orden desde el cliente y eliminar 
     def delete(self,request, id):
@@ -81,6 +94,11 @@ class ProductView(View):
             datos = {'message':"Success"}
         else:
             datos = {'message':"Product not found..."}
-        return JsonResponse(datos)  
+
+        response = JsonResponse(datos)
+               
+        response["Access-Control-Allow-Origin"] = "*"
+        
+        return response
             
 
