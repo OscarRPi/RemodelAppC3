@@ -1,4 +1,5 @@
 from django.db import models
+from dashboard.models import Proveedor
 
 class Categoria(models.Model):
     Id_Categoria= models.AutoField(primary_key=True)
@@ -7,19 +8,6 @@ class Categoria(models.Model):
     def __str__(self):
         txt = "{0} ({1})"
         return txt.format(self.Id_Categoria,self.Categoria)
-
-class Proveedor(models.Model):
-    Id_Proveedor = models.AutoField(primary_key=True)
-    Proveedor = models.CharField(max_length=50)
-    Ciudad = models.CharField(max_length=50)
-    Direccion = models.CharField(max_length=50)
-    Telefono = models.CharField(max_length=50)
-    Whatsapp = models.CharField(max_length=50)
-    Correo = models.CharField(max_length=50)
-    
-    def __str__(self):
-        txt = "{0} {1} ({2})"
-        return txt.format(self.Id_Proveedor,self.Proveedor,self.Ciudad)
 
 class Producto_Ingresado(models.Model):
     Id_ProductoIngresado = models.AutoField(primary_key=True)

@@ -28,7 +28,7 @@ urlpatterns = [
     #path('users/login', views.login_view, name="login"),
     #path('users/logout', views.logout_view, name="logout"),
     path('products/', include('products.urls')),
-    #path('dashboard/', include('dashboard.urls')),
+    path('proveedors/', include('dashboard.urls')),
 ]
 
 if settings.DEBUG:

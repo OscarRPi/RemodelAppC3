@@ -88,7 +88,6 @@ class ProductView(View):
     # Para recibir una orden desde el cliente y eliminar 
     def delete(self,request, id):
         products = list(Producto_Ingresado.objects.filter(Id_ProductoIngresado=id).values())
-        print(products)
         if( len(products) > 0 ):
             Producto_Ingresado.objects.filter(Id_ProductoIngresado=id).delete()
             datos = {'message':"Success"}
