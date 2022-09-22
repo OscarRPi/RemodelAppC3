@@ -23,10 +23,7 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', ProductListView.as_view(), name="index"),
-    #path('', views.index, name="index"),
-    #path('users/login', views.login_view, name="login"),
-    #path('users/logout', views.logout_view, name="logout"),
+    path('users/', include('users.urls')),
     path('products/', include('products.urls')),
     path('proveedors/', include('dashboard.urls')),
 ]
