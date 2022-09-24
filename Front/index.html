@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn de bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="estilos.css">
+    <!-- cdn de las fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
     <title>Remodelapp</title>
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <!-- Barra de Navegacion -->
     <div class="divisor">
         <div class="container-fluid ancho">
             <nav class="nav navbar-light navbar-expand-lg">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img class="mt-1 mb-1" src="img\Logo.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,21 +32,21 @@
                     <!-- Botones -->
                     <ul class="navbar-nav">
                         <li class="nav-item ml-3 mr-3">
-                            <a href="#">INICIO</a>
+                            <a href="index.html">INICIO</a>
                         </li>
                         <li class="nav-item ml-3 mr-3">
-                            <a href="#">CATEGORIAS</a>
+                            <a href="#categorias">CATEGORIAS</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a role="button" data-toggle="dropdown" aria-expanded="false" href="#">
                                 PRODUCTOS
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="productos.html">BAÑO</a>
-                                <a class="dropdown-item" href="#">CARPINTERIA</a>
-                                <a class="dropdown-item" href="#">COCINA</a>
-                                <a class="dropdown-item" href="#">PINTURA</a>
-                                <a class="dropdown-item" href="#">PISOS</a>
+                                <a class="dropdown-item" href="productos.html?id=1">BAÑO</a>
+                                <a class="dropdown-item" href="productos.html?id=2">CARPINTERIA</a>
+                                <a class="dropdown-item" href="productos.html?id=3">COCINA</a>
+                                <a class="dropdown-item" href="productos.html?id=4">PINTURA</a>
+                                <a class="dropdown-item" href="productos.html?id=5">PISOS</a>
                             </div>
                         </li>
                         <li class="nav-item ml-3 mr-3">
@@ -106,39 +109,36 @@
     <!-- Titulo categorias -->
     <div class="divisor"></div>
     <div class="container-fluid ancho">
-        <div class="categoriasinicio mt-5">
+        <div id="categorias" class="categoriasinicio mt-5">
             <h1>CATEGORIAS</h1>
         </div>
     </div>
-    <!-- primera linea de categorias -->
-    <div class="container-fluid d-lg-flex flex-wrap justify-content-between ancho">
+    <!-- categorias -->
+    <div class="container-fluid containercategorias mb-5 ancho">
         <div class="card tarjetasproductos mt-5 p-4">
             <h3>PINTURAS</h3>
             <img class="mt-3 mb-3" src="img/Categoria2.png" alt="">
-            <button class="mt-3">VER PRODUCTOS</button>
+            <a href="productos.html?id=4"><button class="mt-3">VER PRODUCTOS</button></a>
         </div>
         <div class="card tarjetasproductos mt-5 p-4">
             <h3>CARPINTERIA</h3>
             <img class="mt-3 mb-3" src="img/Categoria3.png" alt="">
-            <button class="mt-3">VER PRODUCTOS</button>
+            <a href="productos.html?id=2"><button class="mt-3">VER PRODUCTOS</button></a>
         </div>
         <div class="card tarjetasproductos mt-5 p-4">
             <h3>COCINAS</h3>
             <img class="mt-3 mb-3" src="img/Categoria4.png" alt="">
-            <button class="mt-3">VER PRODUCTOS</button>
+            <a href="productos.html?id=3"><button class="mt-3">VER PRODUCTOS</button></a>
         </div>
-    </div>
-    <!-- segunda linea de categorias -->
-    <div class="container-fluid d-lg-flex flex-wrap justify-content-center ancho mb-5">
-        <div class="card tarjetasproductos mr-5 mt-4 p-4">
+        <div class="card tarjetasproductos mt-5 p-4">
             <h3>PISOS</h3>
             <img class="mt-3 mb-3" src="img/Categoria1.png" alt="">
-            <button class="mt-3">VER PRODUCTOS</button>
+            <a href="productos.html?id=5"><button class="mt-3">VER PRODUCTOS</button></a>
         </div>
-        <div class="card tarjetasproductos ml-5 mt-4 p-4">
+        <div class="card tarjetasproductos mt-5 p-4">
             <h3>BAÑOS</h3>
             <img class="mt-3 mb-3" src="img/Categoria5.png" alt="">
-            <button class="mt-3">VER PRODUCTOS</button>
+            <a href="productos.html?id=1"><button class="mt-3">VER PRODUCTOS</button></a>
         </div>
     </div>
     <!-- Footer -->
