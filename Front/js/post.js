@@ -26,7 +26,7 @@ const crearProducto = async () => {
             headers: {
                 'Content-Type':'application/json'
             },
-            mode: 'cors',
+            mode: 'no-cors',
             body: JSON.stringify([{
                 "Producto": nombre,
                 "Id_Categoria_id": categoria,
