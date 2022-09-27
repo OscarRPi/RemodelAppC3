@@ -23,10 +23,10 @@ const nombreCategorias = (id) => {
 
 const listProducts = async (id) => {
     
-    const response = await fetch("http://127.0.0.1:8000/products/");
+    const response = await fetch("https://remodelapp.pythonanywhere.com/products/");
     const productos = await response.json();
     
-    const response2 = await fetch("http://127.0.0.1:8000/proveedors/");
+    const response2 = await fetch("https://remodelapp.pythonanywhere.com/proveedors/");
     const dataProveedor = await response2.json();
 
     let categoriaActiva = productos.products.filter(function(idCategoria){
@@ -52,6 +52,7 @@ const listProducts = async (id) => {
         </div>`
     })
     document.getElementById("productos").innerHTML = bodyProductos;
+    console.log(response);
 }
 
 const pesoCop = new Intl.NumberFormat('es-CO', {

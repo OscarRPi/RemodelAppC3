@@ -99,3 +99,7 @@ body {
 .der button:hover {
     background-color: #1F8A59;
 }
+
+.form-group label {
+    font-family: 700;
+}

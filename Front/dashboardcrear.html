@@ -40,32 +40,43 @@
                 <div class="divisor"></div>
                 <div class="container-fluid">
                     <div class="ancho">
-                        <h2 class="mt-4 mb-2">LISTAR PRODUCTOS POR CATEGORÍA</h2>
-                        <table class="mb-4">
-                            <tbody>
-                                <tr>
-                                    <td>BAÑOS</td>
-                                    <td><a href=""><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CARPINTERIA</td>
-                                    <td><a href=""><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>COCINA</td>
-                                    <td><a href=""><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>PINTURA</td>
-                                    <td><a href=""><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>PISOS</td>
-                                    <td><a href=""><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button type="submit" id="enviar">CREAR PRODUCTO</button>
+                        <h2 class="mt-4 mb-4">CREAR PRODUCTO</h2>
+                        <form id="formCrear">
+                            <div class="form-group">
+                                <label for="name">NOMBRE</label>
+                                <input class="form-control" type="text" name="name" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="categoria">CATEGORIA</label>
+                                <select class="form-control" name="categoria" id="categoria">
+                                    <option value="">SELECCIONA UNA CATEGORIA</option>
+                                    <option value="1">BAÑOS</option>
+                                    <option value="2">CARPINTERIA</option>
+                                    <option value="3">COCINA</option>
+                                    <option value="4">PINTURA</option>
+                                    <option value="5">PISOS</option>         
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="proveedor">PROVEEDOR</label>
+                                <select class="form-control" name="proveedor" id="proveedor">
+                                    <option value="1">SELECCIONA EL PROVEEDOR</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="valor">VALOR</label>
+                                <input class="form-control" type="number" name="valor" id="valor">
+                            </div>
+                            <div class="form-group">
+                                <label for="color">COLOR</label>
+                                <input class="form-control" type="text" name="color" id="color">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo">TIPO DE MATERIAL</label>
+                                <input class="form-control" type="text" name="tipo" id="tipo">
+                            </div>
+                            <button class="mt-4 mb-4" type="button" id="enviar">CREAR PRODUCTO</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -73,5 +84,6 @@
             <p class="footer text-white text-center p-2 m-0 fixed-bottom">2022 - REMODELAPP - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </div>
+    <script src="js/post.js"></script>
 </body>
 </html>
