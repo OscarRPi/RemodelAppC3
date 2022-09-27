@@ -18,6 +18,7 @@ class Producto_Ingresado(models.Model):
     Color = models.CharField(max_length=50)
     Tipo_Material = models.CharField(max_length=50)
     Fecha_Ingreso = models.DateTimeField(auto_now_add=True)
+    URL = models.URLField(max_length = 200)
     
     def __str__(self):
         txt = "{0} {1}"
