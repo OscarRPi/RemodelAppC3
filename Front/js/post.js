@@ -24,9 +24,9 @@ const crearProducto = async () => {
     const response = await fetch('https://remodelapp.pythonanywhere.com/products/', {
             method: 'POST',
             headers: {
-                'Content-Type':'application/json'
+                'Content-Type':'text/plain'
             },
-            mode: 'no-cors',
+            mode: 'cors',
             body: JSON.stringify([{
                 "Producto": nombre,
                 "Id_Categoria_id": categoria,
