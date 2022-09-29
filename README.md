@@ -33,3 +33,4 @@ Contiene las funciones que controlan el panel de administrador para crear, agreg
 ## *Requerimientos de Python3*
 
 * os
+* django-cors-headers
