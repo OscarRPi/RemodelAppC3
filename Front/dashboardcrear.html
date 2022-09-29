@@ -25,7 +25,7 @@
             <div class="col-lg-3 col-md-4 izq">
                 <img src="img/Logo.png" alt="">
                 <ul class="menulista mt-4">
-                    <li><a href="">GESTIÓN PRODUCTOS</a></li>
+                    <li><a href="dashboard.html">GESTIÓN PRODUCTOS</a></li>
                     <li><a href="">GESTIÓN PROVEEDORES</a></li>
                     <li><a href="">GESTIÓN CATEGORIAS</a></li>
                 </ul>
@@ -41,14 +41,14 @@
                 <div class="container-fluid">
                     <div class="ancho">
                         <h2 class="mt-4 mb-4">CREAR PRODUCTO</h2>
-                        <form id="formCrear">
+                        <form>
                             <div class="form-group">
                                 <label for="name">NOMBRE</label>
-                                <input class="form-control" type="text" name="name" id="name">
+                                <input class="form-control" type="text" id="name">
                             </div>
                             <div class="form-group">
                                 <label for="categoria">CATEGORIA</label>
-                                <select class="form-control" name="categoria" id="categoria">
+                                <select class="form-control" id="categoria">
                                     <option value="">SELECCIONA UNA CATEGORIA</option>
                                     <option value="1">BAÑOS</option>
                                     <option value="2">CARPINTERIA</option>
@@ -59,26 +59,36 @@
                             </div>
                             <div class="form-group">
                                 <label for="proveedor">PROVEEDOR</label>
-                                <select class="form-control" name="proveedor" id="proveedor">
+                                <select class="form-control" id="proveedor">
                                     <option value="1">SELECCIONA EL PROVEEDOR</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="valor">VALOR</label>
-                                <input class="form-control" type="number" name="valor" id="valor">
+                                <input class="form-control" type="number" id="valor">
                             </div>
                             <div class="form-group">
                                 <label for="color">COLOR</label>
-                                <input class="form-control" type="text" name="color" id="color">
+                                <input class="form-control" type="text" id="color">
                             </div>
                             <div class="form-group">
                                 <label for="tipo">TIPO DE MATERIAL</label>
-                                <input class="form-control" type="text" name="tipo" id="tipo">
+                                <input class="form-control" type="text" id="tipo">
                             </div>
-                            <button class="mt-4 mb-4" type="button" id="enviar">CREAR PRODUCTO</button>
+                            <div class="form-group">
+                                <label for="urlImagen">URL IMAGEN</label>
+                                <input class="form-control" type="url" id="urlImagen">
+                            </div>
+                            <div id="btnVolver">
+                                <button class="mt-4 mb-4 pr-4 pl-4" type="button" id="enviar">CREAR PRODUCTO</button>
+                            </div>
                         </form>
                     </div>
                 </div>
+            </div>
+            <!-- alerta -->
+            <div class="alerta" id="alerta">
+                
             </div>
             <!-- Footer -->
             <p class="footer text-white text-center p-2 m-0 fixed-bottom">2022 - REMODELAPP - TODOS LOS DERECHOS RESERVADOS</p>

@@ -44,7 +44,8 @@ class ProductView(View):
             Id_Proveedor_id = jd[0]['Id_Proveedor_id'],
             Valor           = jd[0]['Valor'],
             Color           = jd[0]['Color'],
-            Tipo_Material   = jd[0]['Tipo_Material']
+            Tipo_Material   = jd[0]['Tipo_Material'],
+            URL             = jd[0]['URL']
         )
         
         datos = {'message':"Success"}
