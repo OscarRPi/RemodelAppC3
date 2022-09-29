@@ -86,8 +86,21 @@ body {
     color: #C7A987;
 }
 
+.tableProductos thead {
+    border-bottom: 1px solid #2D2B29;
+}
+
+.tableProductos td {
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+.tableProductos a {
+    font-size: 21px;
+}
+
 .der button {
-    width: 350px;
     height: 60px;
     border: none;
     background-color: #32BA7C;
@@ -102,4 +115,10 @@ body {
 
 .form-group label {
     font-family: 700;
+}
+
+.alerta {
+    position: absolute;
+    bottom: -50px;
+    right: 20px;
 }

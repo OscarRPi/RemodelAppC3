@@ -1,6 +1,6 @@
 const listarProveedores = async () => {
 
-    const resProveedors = await fetch('https://remodelapp.pythonanywhere.com/proveedors/');
+    const resProveedors = await fetch('http://127.0.0.1:8000/proveedors/');
     const dataProveedors = await resProveedors.json();
 
     let proveedores = `<option value="">SELECCIONE EL PROVEEDOR</option>`
@@ -12,7 +12,12 @@ const listarProveedores = async () => {
     document.getElementById("proveedor").innerHTML = proveedores;
 }
 
-const crearProducto = async () => {
+window.addEventListener("load", function(){
+    listarProveedores();
+})
+
+document.getElementById("enviar").addEventListener("click", async (e) => {
+    e.preventDefault();
 
     let nombre = document.getElementById("name").value;
     let categoria = document.getElementById("categoria").value;
@@ -20,32 +25,41 @@ const crearProducto = async () => {
     let valor = document.getElementById("valor").value;
     let color = document.getElementById("color").value;
     let tipo = document.getElementById("tipo").value;
+    let urlImagen = document.getElementById("urlImagen").value;
 
-    const response = await fetch('https://remodelapp.pythonanywhere.com/products/', {
+    const producto = [{
+        "Producto": nombre,
+        "Id_Categoria_id": categoria,
+        "Id_Proveedor_id": proveedor,
+        "Valor": valor,
+        "Color": color,
+        "Tipo_Material": tipo,
+        "URL": urlImagen
+    }]
+
+    let response = await fetch('http://127.0.0.1:8000/products/', {
             method: 'POST',
             headers: {
-                'Content-Type':'text/plain'
+                'Content-Type':'application/json'
             },
-            mode: 'cors',
-            body: JSON.stringify([{
-                "Producto": nombre,
-                "Id_Categoria_id": categoria,
-                "Id_Proveedor_id": proveedor,
-                "Valor": valor,
-                "Color": color,
-                "Tipo_Material": tipo
-            }]),
+            body: JSON.stringify(producto),
+        });
+
+    const data = await response.json();
+
+    if(data.message = "Success"){
+        let alerta = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Producto agregado correctamente.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>`
+        let btnVolver = `<button style="background-color: #eb4034" class="mt-4 mb-4" id="volver">VOLVER</button>`
+        document.getElementById("alerta").innerHTML = alerta;
+        document.getElementById("btnVolver").innerHTML = btnVolver;
+        document.getElementById("volver").addEventListener("click", () => {
+            history.back();
         })
-
-    let data = await response;
-    console.log(data)
-    
-}
-
-window.addEventListener("load", function(){
-    listarProveedores();
-})
-
-document.getElementById("enviar").addEventListener("click", function(){
-    crearProducto();
+    }
 })

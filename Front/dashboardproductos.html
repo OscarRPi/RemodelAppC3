@@ -40,32 +40,27 @@
                 <div class="divisor"></div>
                 <div class="container-fluid">
                     <div class="ancho">
-                        <h2 class="mt-4 mb-2">LISTAR PRODUCTOS POR CATEGORÍA</h2>
-                        <table class="mb-4">
-                            <tbody>
+                        <h2 id="tituloCategoria" class="mt-4 mb-4">LISTAR PRODUCTOS POR CATEGORÍA</h2>
+                        <table class="tableProductos mb-4">
+                            <thead>
                                 <tr>
-                                    <td>BAÑOS</td>
-                                    <td><a href="dashboardproductos.html?id=1"><i class="material-icons">format_list_bulleted</i></a></td>
+                                    <th>NOMBRE</th>
+                                    <th>PROVEEDOR</th>
+                                    <th>PRECIO</th>
+                                    <th>COLOR</th>
+                                    <th>MATERIAL</th>
+                                    <th>EDITAR</th>
+                                    <th>ELIMINAR</th>
                                 </tr>
-                                <tr>
-                                    <td>CARPINTERIA</td>
-                                    <td><a href="dashboardproductos.html?id=2"><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>COCINA</td>
-                                    <td><a href="dashboardproductos.html?id=3"><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>PINTURA</td>
-                                    <td><a href="dashboardproductos.html?id=4"><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>PISOS</td>
-                                    <td><a href="dashboardproductos.html?id=5"><i class="material-icons">format_list_bulleted</i></a></td>
-                                </tr>
+                            </thead>
+                            <tbody id="productos">
+                            
                             </tbody>
                         </table>
-                        <a href="dashboardcrear.html"><button class="pl-4 pr-4" type="submit" id="enviar">CREAR PRODUCTO</button></a>
+                        <div>
+                            <a href="dashboardcrear.html"><button class="pr-4 pl-4" type="submit" id="enviar">CREAR PRODUCTO</button></a>
+                            <a href="dashboard.html"><button class="pr-4 pl-4" style="background-color: #eb4034;">VOLVER</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,5 +68,6 @@
             <p class="footer text-white text-center p-2 m-0 fixed-bottom">2022 - REMODELAPP - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </div>
+    <script src="js/getdashboard.js"></script>
 </body>
 </html>
