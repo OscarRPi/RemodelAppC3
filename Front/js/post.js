@@ -39,8 +39,9 @@ document.getElementById("enviar").addEventListener("click", async (e) => {
 
     let response = await fetch('http://127.0.0.1:8000/products/', {
             method: 'POST',
+            mode: 'cors',
             headers: {
-                'Content-Type':'application/json'
+                'Content-Type':'text/plain'
             },
             body: JSON.stringify(producto),
         });
