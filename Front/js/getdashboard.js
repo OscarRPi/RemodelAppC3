@@ -46,15 +46,13 @@ const listProducts = async (id) => {
                 <td>${product.Valor}</td>
                 <td>${product.Color}</td>
                 <td>${product.Tipo_Material}</td>
-                <td><a href=""><i class="material-icons">edit</i></a></td>
-                <td><a href=""><i style="color:#eb4034;" class="material-icons">delete</i></a></td>
+                <td><a href="editarproducto.html?id=${product.Id_ProductoIngresado}"><i class="material-icons">edit</i></a></td>
+                <td><a href="eliminarproducto.html?id=${product.Id_ProductoIngresado}"><i style="color:#eb4034;" class="material-icons">delete</i></a></td>
             </tr>
         `
-
         
     })
     document.getElementById("productos").innerHTML = producsTable;
-    console.log(categoriaActiva)
 }
 
 window.addEventListener("load", () => {
