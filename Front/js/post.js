@@ -47,6 +47,7 @@ document.getElementById("enviar").addEventListener("click", async (e) => {
         });
 
     const data = await response.json();
+    console.log(data);
 
     if(data.message = "Success"){
         let alerta = `
@@ -56,11 +57,11 @@ document.getElementById("enviar").addEventListener("click", async (e) => {
             <span aria-hidden="true">&times;</span>
             </button>
             </div>`
-        let btnVolver = `<button style="background-color: #eb4034" class="mt-4 mb-4" id="volver">VOLVER</button>`
         document.getElementById("alerta").innerHTML = alerta;
-        document.getElementById("btnVolver").innerHTML = btnVolver;
-        document.getElementById("volver").addEventListener("click", () => {
-            history.back();
-        })
     }
+})
+
+document.getElementById("volver").addEventListener("click", (e) => {
+    e.preventDefault();
+    history.back();
 })

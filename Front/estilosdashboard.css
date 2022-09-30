@@ -119,6 +119,6 @@ body {
 
 .alerta {
     position: absolute;
-    bottom: -50px;
+    top: 92px;
     right: 20px;
 }

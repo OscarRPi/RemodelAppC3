@@ -41,14 +41,14 @@
                 <div class="container-fluid">
                     <div class="ancho">
                         <h2 class="mt-4 mb-4">CREAR PRODUCTO</h2>
-                        <form>
+                        <form id="formEditar">
                             <div class="form-group">
                                 <label for="name">NOMBRE</label>
                                 <input class="form-control" type="text" id="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="categoria">CATEGORIA</label>
-                                <select class="form-control" id="categoria" required>
+                                <select disabled class="form-control" id="categoria" required>
                                     <option value="">SELECCIONA UNA CATEGORIA</option>
                                     <option value="1">BAÑOS</option>
                                     <option value="2">CARPINTERIA</option>
@@ -80,7 +80,7 @@
                                 <input class="form-control" type="url" id="urlImagen" required>
                             </div>
                             <div class="mb-5">
-                                <button class="pr-4 pl-4" type="submit" id="enviar">CREAR PRODUCTO</button>
+                                <button class="pr-4 pl-4" type="submit" id="actualizar">ACTUALIZAR</button>
                                 <button class="pr-4 pl-4" style="background-color: #eb4034;" id="volver">VOLVER</button>
                             </div>
                         </form>
@@ -95,6 +95,6 @@
             <p class="footer text-white text-center p-2 m-0 fixed-bottom">2022 - REMODELAPP - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </div>
-    <script src="js/post.js"></script>
+    <script src="js/put.js"></script>
 </body>
 </html>
