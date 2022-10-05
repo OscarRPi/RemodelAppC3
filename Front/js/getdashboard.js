@@ -55,7 +55,31 @@ const listProducts = async (id) => {
     document.getElementById("productos").innerHTML = producsTable;
 }
 
+const listProveedores = async () => {
+    const response = await fetch('http://127.0.0.1:8000/proveedors/')
+    const data = await response.json();
+
+    tablaProveedores = ``;
+    data.proveedors.forEach((proveedor) => {
+        tablaProveedores += `
+                            <tr>
+                                <td>${proveedor.Proveedor}</td>
+                                <td>${proveedor.Ciudad}</td>
+                                <td>${proveedor.Direccion}</td>
+                                <td>${proveedor.Telefono}</td>
+                                <td>${proveedor.Whatsapp}</td>
+                                <td>${proveedor.Correo}</td>
+                                <td><a href="dashboardeditarproducto.html?id=${proveedor.Id_Proveedor}"><i class="material-icons">edit</i></a></td>
+                                <td><a href="eliminarproveedor.html?id=${proveedor.Id_Proveedor}"><i style="color:#eb4034;" class="material-icons">delete</i></a></td>
+                            </tr>
+        `
+    });
+
+    document.getElementById("proveedores").innerHTML = tablaProveedores;
+}
+
 window.addEventListener("load", () => {
     tituloCategoria(parametroUrl.id);
     listProducts(parametroUrl.id);
+    listProveedores();
 })

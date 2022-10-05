@@ -94,3 +94,9 @@ h2 {
 .bold {
     font-weight: 700;
 }
+
+.alerta {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
