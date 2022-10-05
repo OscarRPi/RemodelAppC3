@@ -39,48 +39,35 @@
                 <div class="divisor"></div>
                 <div class="container-fluid">
                     <div class="ancho">
-                        <h2 class="mt-4 mb-4">CREAR PRODUCTO</h2>
-                        <form id="formEditar">
+                        <h2 class="mt-4 mb-4">EDITAR PROVEEDOR</h2>
+                        <form>
                             <div class="form-group">
-                                <label for="name">NOMBRE</label>
-                                <input class="form-control" type="text" id="name" required>
+                                <label for="nameP">NOMBRE</label>
+                                <input class="form-control" type="text" id="nameP" required>
                             </div>
                             <div class="form-group">
-                                <label for="categoria">CATEGORIA</label>
-                                <select disabled class="form-control" id="categoria" required>
-                                    <option value="">SELECCIONA UNA CATEGORIA</option>
-                                    <option value="1">BAÑOS</option>
-                                    <option value="2">CARPINTERIA</option>
-                                    <option value="3">COCINA</option>
-                                    <option value="4">PINTURA</option>
-                                    <option value="5">PISOS</option>         
-                                </select>
+                                <label for="ciudad">CIUDAD</label>
+                                <input class="form-control" type="text" id="ciudad" required>
                             </div>
                             <div class="form-group">
-                                <label for="proveedor">PROVEEDOR</label>
-                                <select class="form-control" id="proveedor" required>
-                                    <option value="1">SELECCIONA EL PROVEEDOR</option>
-                                </select>
+                                <label for="direccion">DIRECCIÓN</label>
+                                <input class="form-control" type="text" id="direccion" required>
                             </div>
                             <div class="form-group">
-                                <label for="valor">VALOR</label>
-                                <input class="form-control" type="number" id="valor" required>
+                                <label for="telefono">TELEFONO</label>
+                                <input class="form-control" type="tel" id="telefono" required>
                             </div>
                             <div class="form-group">
-                                <label for="color">COLOR</label>
-                                <input class="form-control" type="text" id="color" required>
+                                <label for="whats">WHATSAPP</label>
+                                <input class="form-control" type="tel" id="whats" required>
                             </div>
                             <div class="form-group">
-                                <label for="tipo">TIPO DE MATERIAL</label>
-                                <input class="form-control" type="text" id="tipo" required>
+                                <label for="correo">CORREO ELECTRÓNICO</label>
+                                <input class="form-control" type="email" id="correo" required>
                             </div>
-                            <div class="form-group">
-                                <label for="urlImagen">URL IMAGEN</label>
-                                <input class="form-control" type="url" id="urlImagen" required>
-                            </div>
-                            <div class="mb-5">
-                                <button class="pr-4 pl-4" type="submit" id="actualizar">ACTUALIZAR</button>
-                                <button class="pr-4 pl-4" style="background-color: #eb4034;" id="volver">VOLVER</button>
+                            <div class="mb-5 btnVolver">
+                                <button class="pr-4 pl-4" type="submit" id="enviarProveedor">ACTUALIZAR PROVEEDOR</button>
+                                <a class="pr-4 pl-4 ml-1" href="dashboardproveedores.html">VOLVER</a>
                             </div>
                         </form>
                     </div>
@@ -94,6 +81,6 @@
             <p class="footer text-white text-center p-2 m-0 fixed-bottom">2022 - REMODELAPP - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </div>
-    <script src="js/put.js"></script>
+    <script src="js/putproveedor.js"></script>
 </body>
 </html>

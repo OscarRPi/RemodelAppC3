@@ -63,5 +63,5 @@ document.getElementById("enviar").addEventListener("click", async (e) => {
 
 document.getElementById("volver").addEventListener("click", (e) => {
     e.preventDefault();
-    history.back();
+    window.location=document.referrer;
 })

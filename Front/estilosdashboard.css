@@ -122,3 +122,18 @@ body {
     top: 92px;
     right: 20px;
 }
+
+.btnVolver a {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border: none;
+    background-color: #eb4034;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.btnVolver a:hover {
+    text-decoration: none;
+    background-color: #c72a1f;
+}
